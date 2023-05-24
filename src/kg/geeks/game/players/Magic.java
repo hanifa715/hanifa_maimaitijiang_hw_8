@@ -9,7 +9,7 @@ public class Magic extends Hero {
     public void applySuperPower(Boss boss, Hero[] heroes) {
         for (int i = 0; i < heroes.length; i++) {
             if (heroes[i].getHealth() > 0) {
-                heroes[i].setDamage(heroes[i].getDamage() + 10);
+                heroes[i].setDamage(heroes[i].getDamage() + 5);
             }
 
         }

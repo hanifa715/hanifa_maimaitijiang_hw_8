@@ -30,6 +30,11 @@ public abstract class GameEntity {
     public void setDamage(int damage) {
         this.damage = damage;
     }
+
+    public String getName() {
+        return name;
+    }
+
     public String toString() {
         return this.name + " Health: " + this.health + " Damage: " + this.damage;
     }

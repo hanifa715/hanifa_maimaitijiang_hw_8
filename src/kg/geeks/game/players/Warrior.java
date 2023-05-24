@@ -9,9 +9,11 @@ public class Warrior extends Hero {
 
     @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
-        int coefficient = RPG_Game.random.nextInt(9) + 2;
-        boss.setHealth(boss.getHealth() - coefficient * this.getDamage());
-        System.out.println("Warrior hits critically: " + coefficient * this.getDamage());
+        if (boss.getHealth() > 0) {
+            int coefficient = RPG_Game.random.nextInt(9) + 2;
+            boss.setHealth(boss.getHealth() - coefficient * this.getDamage());
+            System.out.println("Warrior hits critically: " + coefficient * this.getDamage());
+        }
 
     }
 }

@@ -3,10 +3,12 @@ package kg.geeks.game.players;
 public abstract class GameEntity {
     private int health;
     private int damage;
+    private String name;
 
     public GameEntity(int health, int damage, String name) {
         this.health = health;
         this.damage = damage;
+        this.name = name;
     }
 
     public int getHealth() {
@@ -29,6 +31,6 @@ public abstract class GameEntity {
         this.damage = damage;
     }
     public String toString() {
-        return "Health: " + this.health + "Damage: " + this.damage;
+        return this.name + " Health: " + this.health + " Damage: " + this.damage;
     }
 }
